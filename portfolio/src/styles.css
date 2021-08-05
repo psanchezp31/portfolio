@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Space+Mono&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 200vh;
+    font-family: "Victor Mono", monospace;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #fff591;
+    z-index: 100;
+}
+
+.links-wrapper a {
+    list-style: none;
+}
+
+#links-wrapper-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.nav-link > li {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#navbar a:hover {
+    font-style: italic;
+}
+
+.container-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: 15px solid;
+    border-image: linear-gradient(110deg, red, blue) 10;
+    border-image-source: linear-gradient(to right, #43d8c9, #fa26a0);
+    border-top-width: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-direction: column;
+}
+
+#container-hero {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: -webkit-linear-gradient(110deg, #43d8c9 35%, rgba(0, 0, 0, 0) 40%),
+    -webkit-radial-gradient(farthest-corner at 0% 0%, #4d089a 65%, #fa26a0 70%);
+    background: -o-linear-gradient(110deg, #43d8c9 35%, rgba(0, 0, 0, 0) 40%),
+    -o-radial-gradient(farthest-corner at 0% 0%, #4d089a 65%, #fa26a0 70%);
+    background: -moz-linear-gradient(110deg, #43d8c9 35%, rgba(0, 0, 0, 0) 40%),
+    -moz-radial-gradient(farthest-corner at 0% 0%, #a3f7bf 65%, #fa26a0 70%);
+    background: linear-gradient(110deg, #43d8c9 35%, rgba(0, 0, 0, 0) 40%),
+    radial-gradient(farthest-corner at 0% 0%, #4d089a 65%, #fa26a0 70%);
+}
+
+header {
+    width: 50%;
+    font-family: "Quicksand", sans-serif;
+    margin-top: 50px;
+    padding-left: -20px;
+}
+
+h1 {
+    font-size: 150px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1 span {
+    font-size: 50px;
+}
+
+.name {
+    display: inline;
+}
+
+span a {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+}
+
+span a::before {
+    content: "";
+    position: absolute;
+    left: 7%;
+    bottom: 10px;
+    width: 110px;
+    height: 15px;
+    transform: skew(-10deg) translateX(-10%);
+    background: rgba(255, 255, 253, 0.5);
+    z-index: 1;
+}
+
+#hero {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#image-hero {
+    max-width: 100%;
+    width: 800px;
+}
+
+code {
+    width: 100%;
+    font-size: 30px;
+    font-family: "Victor Mono", monospace;
+}
+
+.brmedium {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.section-divider {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    font-family: "Quicksand", sans-serif;
+    color: #52057b;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    transition: 2s;
+    -webkit-text-stroke: 0.2px black;
+}
+
+.section-divider h2 {
+    font-size: 50px;
+}
+
+.section-divider::after {
+    font-size: 50px;
+}
+
+.section-divider:hover {
+    letter-spacing: 2px;
+    background-image: radial-gradient(
+            circle at center,
+            #43d8c9,
+            #fa26a0,
+            #fff591
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 50%;
+    animation: textGradient 1s 2, textNormal 3s 2 1 forwards;
+    -webkit-text-stroke: 0.2px black;
+}
+
+@keyframes textGradient {
+    to {
+        background-position: 100%;
+    }
+}
+
+@keyframes textNormal {
+    to {
+        color: #52057b;
+        -webkit-text-stroke: 0.2px black;
+    }
+}
+
+.content-section {
+    display: flex;
+    height: 100%;
+}
+
+#text-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+#text-section code {
+    font-family: "Victor Mono", monospace;
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    line-height: 1.4;
+}
+
+#description-photo-section {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+#description-profile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 30px 10px 0px 10px;
+    line-height: 1.6;
+}
+
+#photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.background-photo {
+    display: flex;
+}
+
+#paula-photo {
+    display: flex;
+    position: absolute;
+    width: 280px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #05dfd7;
+    -webkit-text-stroke: 0.3px black;
+}
+
+#technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(2, 100px);
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    grid-gap: 5px;
+}
+
+#technologies-grid i {
+    font-size: 50px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.overlay {
+    font-family: "Quicksand", sans-serif;
+    transition: 0.3s ease;
+}
+
+.iconfa:hover::after {
+    content: "VueJs";
+    font-family: "Quicksand", sans-serif;
+}
+
+#technologies-grid .overlay:hover {
+    opacity: 1;
+}
+
+.emphasize-text {
+    font-weight: 800;
+}
+
+.emphasize-text1 {
+    color: #05dfd7;
+}
+
+.emphasize-text2 {
+    color: #52057b;
+    background: #fff591;
+}
+
+#cv-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#cv-button {
+    width: 50%;
+    height: 60px;
+    border: none;
+    background: black;
+    color: #fff;
+    border-radius: 1.6875rem;
+    font-size: 30px;
+    font-family: "Quicksand";
+    cursor: pointer;
+}
+
+.slider-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.glide__slide {
+    border: 2px solid rgba(184, 184, 184, 0.5);
+    margin: 0 5px;
+    height: 45vh;
+    display: list-item;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 9px 10px 7px 4px rgba(184, 184, 184, 0.5);
+    -webkit-box-shadow: 9px 10px 7px 4px rgba(184, 184, 184, 0.5);
+    -moz-box-shadow: 9px 10px 7px 4px rgba(184, 184, 184, 0.5);
+}
+
+.image-project,
+.gif-project {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.image-project:hover {
+    transition: 1s ease;
+}
+
+.gif-project {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+
+.project-tile {
+    position: absolute;
+    bottom: 10px;
+    background: #fff591;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+li {
+    list-style-type: none;
+}
+
+#img-project1 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/slidingPuzzle.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project1:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/sliding-puzzle.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project2 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/magazine.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project2:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/magazine-cover.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project3 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/surveyFormA11Y.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project3:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/survey-form-a11Y.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project4 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/signIn.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project4:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/sign-in.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project5 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/pinkCalculator.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project5:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/pink-calculator.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project6 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/maneyApp.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project6:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/maney-app.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project7 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/technicalDocumentationPage.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project7:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/technical-documentation-page.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project8 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/productLandingPage.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project8:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/product-landing-page.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project9 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/surveyForm.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project9:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/survey-form.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+#img-project10 {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/TributePage.PNG");
+    background-position: center;
+    background-size: cover;
+}
+
+#gif-project10:hover {
+    background: url("https://psanchezp31.github.io/hosted-assets/images-portfolio/tribute-page.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#title-contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+#title-contact-container h3 {
+    font-size: 70px;
+}
+
+.subcontainer-links {
+    display: inline-block;
+    text-align: center;
+    line-height: 12vw;
+    width: 12vw;
+    height: 12vw;
+    margin: 0.25em 0.25em;
+    font-size: calc(12vw / 2);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px dotted #43d8c9;
+}
+
+.subcontainer-links i:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(110deg, #43d8c9 35%, rgba(0, 0, 0, 0) 40%),
+    radial-gradient(farthest-corner at 0% 0%, #4d089a 65%, #fa26a0 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 696px) and (max-width: 1179px) {
+    h1 {
+        font-size: 132px;
+    }
+
+    h1 span {
+        font-size: 36px;
+    }
+
+    span a {
+        font-size: 30px;
+    }
+
+    span a::before {
+        bottom: 6px;
+    }
+
+    #cv-button {
+        font-size: 20px;
+    }
+
+    #title-contact-container h3 {
+        font-size: 60px;
+    }
+}
