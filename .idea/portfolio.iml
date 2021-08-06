@@ -12,5 +12,6 @@
     <orderEntry type="library" name="victormono" level="application" />
     <orderEntry type="library" name="font-mfizz" level="application" />
     <orderEntry type="library" name="css-doodle" level="application" />
+    <orderEntry type="library" name="@glidejs/glide" level="application" />
   </component>
 </module>

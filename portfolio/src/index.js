@@ -1,5 +1,4 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
+import Glide from '@glidejs/glide'
 
 document.body.addEventListener("click", function (e) {
   if (e.target.matches("css-doodle")) {
@@ -9,7 +8,7 @@ document.body.addEventListener("click", function (e) {
 
 let grid = document.getElementById("technologies-grid");
 
-var icons = {
+let icons = {
   JavaScript: "icon-javascript-alt",
   Html5: "icon-html5-alt",
   Css3: "icon-css3-alt",
@@ -22,11 +21,11 @@ var icons = {
   MySQL: "icon-mysql",
 };
 
-var fragment = document.createDocumentFragment();
+let fragment = document.createDocumentFragment();
 
 
 Object.keys(icons).forEach(function (icon) {
-  var i = document.createElement("i");
+  let i = document.createElement("i");
   i.id = icon;
   i.className = icons[icon] + " overlay";
   if(i.id == "VueJs"){
@@ -38,9 +37,8 @@ Object.keys(icons).forEach(function (icon) {
 });
 
 grid.appendChild(fragment);
-
-let children = grid.children;
-
+grid.children;
+console.log(grid.children);
 //console.log(grid)
 
 function mouseOver(event) {
@@ -48,7 +46,6 @@ function mouseOver(event) {
   event.target.innerHTML = elementHoverId;
   if(elementHoverId == 'VueJs'){
     event.target.innerHTML = "";
-    console.log("holaa")
   }
   event.target.style.fontSize = "15px";
   event.target.style.color="#4d089a";
@@ -88,16 +85,3 @@ window.addEventListener('load', () => {
 
 
 
-/*
-window.addEventListener('load', function(){
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 4,
-    draggable:true,
-    dots: '.dots',
-    arrows:{
-      prev: '.glider-prev',
-      next: '.glider-next'
-  }
-  })
-})
-*/
